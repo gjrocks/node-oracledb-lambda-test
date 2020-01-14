@@ -12,7 +12,7 @@ if [[ "${NODE_VERSION}" != "v10.0.0" ]]; then
   rm -rf node-v8.0.0*
 fi
 
-git clone https://github.com/nalbion/node-oracledb-lambda-test.git
+git clone https://github.com/gjrocks/node-oracledb-lambda-test.git
 cd node-oracledb-lambda-test
 
 # Install Oracle Instant Client "Basic" and "SDK"
