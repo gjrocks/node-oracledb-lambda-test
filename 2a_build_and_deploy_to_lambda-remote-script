@@ -17,14 +17,14 @@ cd node-oracledb-lambda-test
 
 # Install Oracle Instant Client "Basic" and "SDK"
 sudo mkdir /opt/oracle
-sudo unzip oracle-instant-client/instantclient-basic-linux.x64-12.1.0.2.0.zip -d /opt/oracle
-sudo unzip oracle-instant-client/instantclient-sdk-linux.x64-12.1.0.2.0.zip -d /opt/oracle
-export OCI_LIB_DIR=/opt/oracle/instantclient_12_1
-export OCI_INC_DIR=/opt/oracle/instantclient_12_1/sdk/include
-export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_1:$LD_LIBRARY_PATH
-export PATH=/opt/oracle/instantclient_12_1:$PATH
+sudo unzip oracle-instant-client/instantclient-basic-linux.x64-18.5.0.0.0dbru.zip -d /opt/oracle
+sudo unzip oracle-instant-client/instantclient-sdk-linux.x64-18.5.0.0.0dbru.zip -d /opt/oracle
+export OCI_LIB_DIR=/opt/oracle/instantclient_18_5
+export OCI_INC_DIR=/opt/oracle/instantclient_18_5/sdk/include
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_18_5:$LD_LIBRARY_PATH
+export PATH=/opt/oracle/instantclient_18_5:$PATH
 pushd $OCI_LIB_DIR
-sudo ln -s libclntsh.so.12.1 libclntsh.so
+sudo ln -s libclntsh.so.18.1 libclntsh.so
 popd
 
 npm install
@@ -36,11 +36,11 @@ zip app.zip index.js package.json \
     node_modules/oracledb/index.js \
     node_modules/oracledb/lib/* \
     node_modules/oracledb/build/Release/oracledb.node \
-    lib/libclntshcore.so.12.1 \
-    lib/libclntsh.so.12.1 \
+    lib/libclntshcore.so.18.1 \
+    lib/libclntsh.so.18.1 \
     lib/libmql1.so \
     lib/libipc1.so \
-    lib/libnnz12.so \
+    lib/libnnz18.so \
     lib/libons.so \
     lib/libociicus.so \
     lib/libaio.so.1
